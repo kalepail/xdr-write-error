@@ -9,6 +9,7 @@ target
 # soroban/Rust output
 target
 .soroban
+test_snapshots
 
 # build output
 dist/

@@ -28,7 +28,7 @@ if (typeof window !== 'undefined') {
 exports.networks = {
     standalone: {
         networkPassphrase: "Standalone Network ; February 2017",
-        contractId: "CAKFUVH47FNOMULTVHNWCSEEHMTPS625YPFR3MJBRYOQW53UGELBO7BC",
+        contractId: "CCH3UPHCUEWNMQOKZVZW6NKIZ543SB4RFV756RJ4TFH5GIG4EPISPN7Q",
     }
 };
 exports.Errors = {};

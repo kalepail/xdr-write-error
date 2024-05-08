@@ -5,7 +5,7 @@ export * from '@stellar/stellar-sdk/lib/rust_types/index.js';
 export declare const networks: {
     readonly standalone: {
         readonly networkPassphrase: "Standalone Network ; February 2017";
-        readonly contractId: "CAKFUVH47FNOMULTVHNWCSEEHMTPS625YPFR3MJBRYOQW53UGELBO7BC";
+        readonly contractId: "CCH3UPHCUEWNMQOKZVZW6NKIZ543SB4RFV756RJ4TFH5GIG4EPISPN7Q";
     };
 };
 export declare const Errors: {};
