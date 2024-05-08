@@ -1,0 +1,20 @@
+{
+    "version": "0.0.0",
+    "name": "hello_world",
+    "dependencies": {
+        "@stellar/freighter-api": "2.0.0",
+        "buffer": "6.0.3",
+        "@stellar/stellar-sdk": "git+https://github.com/stellar/js-stellar-sdk.git#e4db91c4842538fe518bac7d3f448924dca6fb4b"
+    },
+    "scripts": {
+        "build": "node ./scripts/build.mjs"
+    },
+    "exports": {
+        "require": "./dist/cjs/index.js",
+        "import": "./dist/esm/index.js"
+    },
+    "typings": "dist/types/index.d.ts",
+    "devDependencies": {
+        "typescript": "5.3.3"
+    }
+}

@@ -4,7 +4,6 @@ target
 # Local Soroban settings
 .soroban
 
-
 # The following is from the Frontend Template's .gitignore
 
 # soroban/Rust output
@@ -13,6 +12,7 @@ target
 
 # build output
 dist/
+!packages/*/dist/
 
 # generated types
 .astro/
@@ -34,9 +34,9 @@ pnpm-debug.log*
 .DS_Store
 
 # generated contract clients
-packages/*
+# packages/*
 # if you have other workspace packages, add them here
-!packages/.gitkeep
+# !packages/.gitkeep
 
 # generated contract client imports
 src/contracts/*
