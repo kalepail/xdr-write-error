@@ -1,0 +1,18 @@
+[package]
+name = "soroban-increment-contract"
+edition = "2021"
+version = "0.0.0"
+publish = false
+[dependencies.soroban-sdk]
+workspace = true
+[dev-dependencies.soroban-sdk]
+features = ["testutils"]
+workspace = true
+
+[lib]
+path = "src/lib.rs"
+name = "soroban_increment_contract"
+doctest = false
+edition = "2021"
+crate-type = ["rlib"]
+required-features = []
