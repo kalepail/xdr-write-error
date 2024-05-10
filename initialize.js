@@ -79,7 +79,7 @@ function bind_all() {
   contractFiles.forEach(contractFile => {
     const contractPath = path.join(contractIdsDir, contractFile);
     if (statSync(contractPath).size > 0) {  // Check if file is not empty
-      bind(contractPath);
+      // bind(contractPath);
     }
   });
 }

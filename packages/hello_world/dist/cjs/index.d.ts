@@ -1,11 +1,9 @@
-import { AssembledTransaction, ContractClient, ContractClientOptions } from '@stellar/stellar-sdk/lib/contract_client/index.js';
+import { SorobanRpc } from '@stellar/stellar-sdk';
 export * from '@stellar/stellar-sdk';
-export * from '@stellar/stellar-sdk/lib/contract_client/index.js';
-export * from '@stellar/stellar-sdk/lib/rust_types/index.js';
 export declare const networks: {
     readonly standalone: {
         readonly networkPassphrase: "Standalone Network ; February 2017";
-        readonly contractId: "CCH3UPHCUEWNMQOKZVZW6NKIZ543SB4RFV756RJ4TFH5GIG4EPISPN7Q";
+        readonly contractId: "CBHI4YIHVLLQJC2CNRSH4XI7HJLKWOYSQUTS3PK44ABZDRWPY3PUT62R";
     };
 };
 export declare const Errors: {};
@@ -28,12 +26,12 @@ export interface Client {
          * Whether to automatically simulate the transaction when constructing the AssembledTransaction. Default: true
          */
         simulate?: boolean;
-    }) => Promise<AssembledTransaction<Array<string>>>;
+    }) => Promise<SorobanRpc.ContractClient.AssembledTransaction<Array<string>>>;
 }
-export declare class Client extends ContractClient {
-    readonly options: ContractClientOptions;
-    constructor(options: ContractClientOptions);
+export declare class Client extends SorobanRpc.ContractClient.ContractClient {
+    readonly options: SorobanRpc.ContractClient.ContractClientOptions;
+    constructor(options: SorobanRpc.ContractClient.ContractClientOptions);
     readonly fromJSON: {
-        hello: (json: string) => AssembledTransaction<string[]>;
+        hello: (json: string) => SorobanRpc.ContractClient.AssembledTransaction<string[]>;
     };
 }

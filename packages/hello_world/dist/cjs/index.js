@@ -17,10 +17,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Client = exports.Errors = exports.networks = void 0;
 const stellar_sdk_1 = require("@stellar/stellar-sdk");
 const buffer_1 = require("buffer");
-const index_js_1 = require("@stellar/stellar-sdk/lib/contract_client/index.js");
+// const {
+//   AssembledTransaction,
+//   ContractClient,
+//   ContractClientOptions,
+// } = SorobanRpc.ContractClient // from SorobanRpc.ContractClient // '@stellar/stellar-sdk/lib/contract_client/index.js';
+// const {
+//   u32,
+//   i32,
+//   u64,
+//   i64,
+//   u128,
+//   i128,
+//   u256,
+//   i256,
+//   Option,
+//   Typepoint,
+//   Duration,
+// } = SorobanRpc.ContractClient // from '@stellar/stellar-sdk/lib/contract_client';
+// import { Result } from '@stellar/stellar-sdk/lib/rust_types/index.js';
 __exportStar(require("@stellar/stellar-sdk"), exports);
-__exportStar(require("@stellar/stellar-sdk/lib/contract_client/index.js"), exports);
-__exportStar(require("@stellar/stellar-sdk/lib/rust_types/index.js"), exports);
+// export * from '@stellar/stellar-sdk/lib/contract_client/index.js'
+// export * from '@stellar/stellar-sdk/lib/rust_types/index.js'
 if (typeof window !== 'undefined') {
     //@ts-ignore Buffer exists
     window.Buffer = window.Buffer || buffer_1.Buffer;
@@ -28,11 +46,11 @@ if (typeof window !== 'undefined') {
 exports.networks = {
     standalone: {
         networkPassphrase: "Standalone Network ; February 2017",
-        contractId: "CCH3UPHCUEWNMQOKZVZW6NKIZ543SB4RFV756RJ4TFH5GIG4EPISPN7Q",
+        contractId: "CBHI4YIHVLLQJC2CNRSH4XI7HJLKWOYSQUTS3PK44ABZDRWPY3PUT62R",
     }
 };
 exports.Errors = {};
-class Client extends index_js_1.ContractClient {
+class Client extends stellar_sdk_1.SorobanRpc.ContractClient.ContractClient {
     options;
     constructor(options) {
         super(new stellar_sdk_1.ContractSpec(["AAAAAAAAAAAAAAAFaGVsbG8AAAAAAAABAAAAAAAAAAJ0bwAAAAAAEQAAAAEAAAPqAAAAEQ=="]), options);
